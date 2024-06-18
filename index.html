@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+		    *{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .w{
+        margin: auto;
+    }
+    li{
+        list-style: none;
+    }
+    .header{
+        height: 42px;
+        margin:0px auto;
+		background-color:#444
+    }
+    .logo{
+        float: left;
+        width: 1px;
+        height: 42px;
+    }
+    .nav{
+        float: left;
+        margin-left: 60px;
+    }
+    .nav ul li{
+        float: left;
+        margin: 0 20px;
+    }
+    .nav ul li a{
+        display:block;
+        height: 42px;
+        padding: 0 10px;
+        line-height: 42px;
+        color: white;
+		text-decoration: none;
+    }
+    .search{
+        float: right;
+        width: 412px;
+        height: 42px;
+        background-color: #444;
+        margin-left: 50px; 
+    }
+    .search input{
+        float: left;
+        width: 345px;
+        height: 40px;
+        border: 1px solid #444;
+        border-right: 0;
+        color: #bfbfbf;
+        font-size: 14px;
+        padding-left: 15px;
+    }
+    .search button{
+        float: left;
+        width: 50px;
+        height: 42px;
+    /* 去掉按钮默认边框 */
+        border: 0;
+        background: url(images/btn.png);
+		}
+		.user{
+			float:left;
+		}	
+		/*图片轮播*/
+    .jdt {
+    border: 1px solid #CCCCCC;
+    padding:0;
+	margin:0 auto;
+    text-align:center;
+    width:100%;
+	height:auto;	
+    border-collapse:collapse;
+    }
+    a:link {
+	font-size:small;
+    color: #333333;
+    text-decoration: none;
+    }
+    a:visited {
+    color: #333333;
+    text-decoration: none;
+    }
+    a:hover {
+    color: #FF6600;
+    }
+    a:active {
+    text-decoration: none;
+    }
+
+    .index_page{
+    float:right;
+    display:block;
+    height:16px;
+    padding:1px 0;
+    margin-right:4px;
+    }
+    .index_page *{
+    float:left;
+    display:inline;
+    line-height:16px;
+    border:1px solid #B6CFCD;
+    text-align:center;
+    padding:0;margin:0 2px;}
+    .index_page strong{
+    background:#009A91;
+    color:#fff;
+    width:16px;
+    }
+   .index_page span{
+    color:#009a91;
+    padding:3px 0 0 0;
+    border:0;
+    cursor:pointer;
+    }
+    .index_page a{
+    width:16px;
+    color:#009A91;
+    text-decoration:none;
+    }		
+
+	</style>	
+</head>
+<body>
+<div class="header w">
+        <!-- 标志模块 -->
+        <div class="logo">
+            <img src="yuanhui.png" width="42"/>
+        </div>
+        <!-- 文字导航栏模块 -->
+        <div class="nav">
+            <ul>
+                <li>
+                  <a href="headimg.html" target="forward">首页</a>
+                </li>
+                <li>
+                  <a href="list.html" target="forward">人员构成</a>
+                </li>
+                <li>
+                  <a href="schedule.html" target="forward">赛程</a>
+                </li>
+				<li>
+                  <a href="#">球队荣誉</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 搜索模块 -->
+        <div class="search">
+            <input type="text" value="输入关键词" ></input>
+            <button style="color:white" >搜索</button>
+        </div>
+        <!-- 用户模块 -->
+        <div class="user" style="color:white" >
+            <img src="administrator.jpg" width="42" height="43" style="vertical-align: middle"> 
+          user-name
+    	</div>
+</div>
+	<!--图片轮播-->
+<table class="jdt">
+    <tr><td>
+        <script language="javascript" type="text/javascript">
+            //<![CDATA[
+            var _t1 = 0; 	//打开页面时等待图片载入的时间，单位为秒，可以设置为0
+            var _t2 = 3; 	//图片轮转的间隔时间
+            var _tnum = 3; //焦点图个数
+            var _tn = 1;	//当前焦点
+            var _tl =null;
+            _tt1 = setTimeout('change_img()',_t1*1000);
+
+            function change_img(){
+                setFocus(_tn);
+                _tt1 = setTimeout('change_img()',_t2*1000);
+            }
+            function setFocus(i){
+                if(i>_tnum){_tn=1;i=1;}
+                _tl?document.getElementById('focusPic'+_tl).style.display='none':'';
+                document.getElementById('focusPic'+i).style.display='block';
+                _tl=i;
+                _tn++;
+            }
+            //]]>
+        </script>
+        <!--焦点图1开始 标题13字 说明30个字-->
+        <div id="focusPic1">
+            <a href="#" >
+                <img src="footballteam12.jpg" alt="赛前列队-1" /></a>
+            <h1><a href="#" >球队合影</a></h1>
+            <div class="index_page"><span onClick="javascript:setFocus(2);"></span>
+                <strong>1</strong>
+                <a href="javascript:setFocus(2);">2</a>
+                <a href="javascript:setFocus(3);">3</a>
+            </div>
+        </div>
+        <!--焦点图1结束-->
+        <!--焦点图2开始  标题13字 说明30个字-->
+        <div id="focusPic2" style="display:none;">
+            <a href="#">
+                <img src="footballteam7.jpg" alt="赛前列队-2" /></a>
+            <h1><a href="#" >球队合影</a></h1>
+            <div class="index_page"><span onClick="javascript:setFocus(3);"></span>
+                <a href="javascript:setFocus(1);">1</a>
+                <strong>2</strong>
+                <a href="javascript:setFocus(3);">3</a>
+            </div>
+        </div>
+        <!--焦点图2结束-->
+        <!--焦点图3开始  标题13字 说明30个字-->
+        <div id="focusPic3" style="display:none;">
+            <a href="#" >
+                <img src="footballteam8.jpg" alt="球队合影" />
+            </a>
+            <h1><a href="#" >赛前列队</a></h1>
+            <div class="index_page"><span onClick="javascript:setFocus(4);"></span>
+                <a href="javascript:setFocus(1);">1</a>
+                <a href="javascript:setFocus(2);">2</a>
+                <strong>3</strong>
+            </div>
+        </div>
+        <!--焦点图3结束-->
+    </td></tr>
+</table>
+<table class=embed style="width:99.9%;" border="1" cellspacing="0">
+		<tr>
+			<td rowspan="3" style="width:100%;height:1000px;">
+			<iframe src="headimg.html" name="forward" width="100%" height="100%"></iframe>
+			</td>
+		</tr>
+	</table>	
+</body>
+</html>
